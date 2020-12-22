@@ -2,23 +2,18 @@ package Cursor;
 
 public class Solution {
     public static void main(String[] args) {
-        int x = 3;
 
-        while (true) {
 
-            if (x < 2) {
-                System.out.print("a");
+        StringBuilder error = new StringBuilder();
+
+        try{
+            while(true){
+                error.append("Error");
             }
-            if (x == 2) {
-                System.out.print("b c");
-            }
-            if (x == 1)  {
-                System.out.print("d");
-                x = x - 1;
-            }
-            x = x - 1;
-            System.out.print("-");
+        } catch (OutOfMemoryError crash){
+            System.out.println(crash.getMessage());
+            System.out.println( crash);
+
         }
     }
 }
-
